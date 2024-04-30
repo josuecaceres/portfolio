@@ -5,8 +5,18 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:href": "ng build --base-href ./",
+    "build:github": "npm run build:href && npm run delete:docs && npm run copy:all",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "copy:licence": "copyfiles dist/porfolio/* ./docs -f",
+    "copy:browser": "copyfiles dist/porfolio/browser/* ./docs -f",
+    "copy:assets": "copyfiles dist/porfolio/browser/assets/* ./docs/assets -f",
+    "copy:assets1": "copyfiles dist/porfolio/browser/assets/icons/* ./docs/assets/icons -f",
+    "copy:assets2": "copyfiles dist/porfolio/browser/assets/images/* ./docs/assets/images -f",
+    "copy:media": "copyfiles dist/porfolio/browser/media/* ./docs/media -f",
+    "copy:all": "npm run copy:licence && npm run copy:browser && npm run copy:assets && npm run copy:assets1 && npm run copy:assets2 && npm run copy:media",
+    "delete:docs": "del-cli docs"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +38,8 @@
     "@angular/cli": "^17.3.5",
     "@angular/compiler-cli": "^17.3.0",
     "@types/jasmine": "~5.1.0",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
