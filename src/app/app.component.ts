@@ -23,12 +23,17 @@ import { ContactComponent } from './sections/contact/contact.component';
 })
 export class AppComponent {
   scrolled: boolean = false;
-  showMenu: boolean = true;
+  showMenu: boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.showMenu = false;
-    if (window.scrollY > 120) {
+    const scrollPosition =
+      window.scrollY ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+    if (scrollPosition > 150) {
       this.scrolled = true;
     } else {
       this.scrolled = false;

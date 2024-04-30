@@ -64,3 +64,14 @@
     }
   }
 }
+
+@media (max-width: 1700px) {
+  section {
+    padding: 90px 8% 80px;
+  }
+}
+@media (max-width: 1380px) {
+  section {
+    padding: 90px 5% 80px;
+  }
+}

@@ -1,5 +1,7 @@
 <header [class.scrolled]="scrolled">
-  <a href="#home" class="logo">EJC<span>17</span></a>
+  <a href="#home" class="logo">
+    <img src="assets/images/icon.png">
+  </a>
 
   <div class="bx bx-menu" id="menu-icon" (click)="toggleMenu()"></div>
 
@@ -17,14 +19,14 @@
 <section-projects />
 <section-contact />
 
+<a href="#home" [class.show]="scrolled" class="scroll-top">
+  <i class='bx bx-up-arrow-alt'></i>
+</a>
+
 <footer class="footer">
   <div class="copyright">
-    <p>2024 Elvin Josue, Todos los derechos reservados.</p>
+    <p>&copy;2024 Elvin Josue, Todos los derechos reservados.</p>
   </div>
-
-  <a href="#home" class="scroll-top">
-    <i class='bx bx-up-arrow-alt'></i>
-  </a>
 </footer>
 
 <router-outlet />
