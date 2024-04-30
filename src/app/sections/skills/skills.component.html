@@ -1,0 +1,32 @@
+<section class="skills" id="skills">
+  <div class="center-text" data-aos="fade-down">
+    <h2>Mis <span>Habilidades</span></h2>
+  </div>
+  <p>Lenguajes de programación</p>
+  <div class="skills-content" data-aos="zoom-in-up">
+    @for (skill of lenguajes; track $index) {
+    <div class="box">
+      <img [src]="skill.img" [alt]="skill.name">
+      <h3>{{skill.name}}</h3>
+    </div>
+    }
+  </div>
+  <p>Tecnologías Frontend</p>
+  <div class="skills-content" data-aos="zoom-in-up">
+    @for (skill of front; track $index) {
+    <div class="box">
+      <img [src]="skill.img" [alt]="skill.name">
+      <h3>{{skill.name}}</h3>
+    </div>
+    }
+  </div>
+  <p>Tecnologías Backend</p>
+  <div class="skills-content" data-aos="zoom-in-up">
+    @for (skill of back; track $index) {
+    <div class="box">
+      <img [src]="skill.img" [alt]="skill.name">
+      <h3>{{skill.name}}</h3>
+    </div>
+    }
+  </div>
+</section>

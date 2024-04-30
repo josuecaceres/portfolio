@@ -1,1 +1,152 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://unpkg.com/aos@next/dist/aos.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text-color: #fff;
+  --bg-color: #1b1f24;
+  --second-bg-color: #22282f;
+  --main-color: #13bbff;
+  --other-color: #c3cad5;
+
+  --h1-font: 4.5rem;
+  --h2-font: 2.9rem;
+  --p-font: 1rem;
+}
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+  section {
+    padding: 110px 16% 90px;
+  }
+}
+
+/* Media Query */
+@media screen and (max-width: 1700px) {
+  header {
+    padding: 20px 8%;
+    .scrolled {
+      padding: 14px 8%;
+    }
+  }
+  section {
+    padding: 90px 8% 80px;
+  }
+  .footer {
+    padding: 18px 8%;
+  }
+  .logo {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1380px) {
+  header {
+    padding: 20px 5%;
+    .scrolled {
+      padding: 14px 5%;
+    }
+  }
+  section {
+    padding: 90px 5% 80px;
+  }
+  .footer {
+    padding: 18px 5%;
+  }
+  .hero {
+    height: 90vh;
+  }
+}
+@media screen and (max-width: 1290px) {
+  .box {
+    padding: 40px 40px 46px;
+    img {
+      width: 100%;
+      height: 60px;
+      max-width: 60px;
+    }
+    h3 {
+      font-size: 21px;
+    }
+  }
+}
+@media screen and (max-width: 1240px) {
+  :root {
+    --h1-font: 4rem;
+    --h2-font: 2.2rem;
+    --p-font: 15px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+    .about-img img {
+      text-align: center;
+      width: 100%;
+      height: 400px;
+      max-width: 400px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  :root {
+    --h1-font: 3.5rem;
+  }
+  .social {
+    margin-bottom: 20px;
+  }
+  #menu-icon {
+    display: block;
+  }
+  .navlist {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 255px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    transition: all 0.5s ease;
+    a {
+      display: block;
+      padding: 17px;
+      font-size: 22px;
+    }
+    &.active {
+      right: 0;
+    }
+  }
+}
+@media screen and (max-width: 680px) {
+  .main-content p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 470px) {
+  :root {
+    --h1-font: 3rem;
+    --h2-font: 2rem;
+  }
+  .about-img img {
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    max-width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+}
