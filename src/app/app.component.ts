@@ -33,7 +33,7 @@ export class AppComponent {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-    if (scrollPosition > 150) {
+    if (scrollPosition > 120) {
       this.scrolled = true;
     } else {
       this.scrolled = false;

@@ -1,14 +1,17 @@
 <section class="contact" id="contact">
   <div class="center-text" data-aos="fade-down">
     <h2>Contáctame</h2>
+    <br>
+    <p>Escríbeme un correo electrónico y entablemos una conversación.</p>
   </div>
 
   <div class="contact-form" data-aos="zoom-in">
-    <form action="">
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="text" placeholder="Correo eléctronico" required>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
-      <button type="submit" class="send-btn">Enviar mensaje</button>
+    <form [formGroup]="form" (submit)="sendEmail($event)">
+      <input type="text" formControlName="from_name" name="from_name" placeholder="Tu nombre" required>
+      <input type="email" formControlName="from_email" name="from_email" placeholder="Correo eléctronico" required>
+      <textarea formControlName="message" name="message" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."
+        required></textarea>
+      <button type="submit" class="send-btn" value="Enviar mensaje">Enviar mensaje</button>
     </form>
   </div>
 </section>
