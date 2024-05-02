@@ -3,7 +3,8 @@
     <img src="assets/images/icon.png">
   </a>
 
-  <div class="bx bx-menu" id="menu-icon" (click)="toggleMenu()"></div>
+  <div [ngClass]="{'bx-menu': showMenu==false, 'bx-x': showMenu == true}" class="bx" id="menu-icon"
+    (click)="toggleMenu()"></div>
 
   <ul [class.active]="showMenu" class="navlist">
     <li><a href="#home">Inicio</a></li>

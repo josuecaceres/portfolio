@@ -14,21 +14,29 @@
     form {
       position: relative;
       width: 600px;
-      input,
-      textarea {
-        width: 100%;
-        padding: 20px;
-        border: none;
-        outline: none;
-        box-shadow: 0 0 5px var(--main-color);
-        background: #2d343f;
-        color: var(--text-color);
+      .control {
         margin-bottom: 20px;
-        border-radius: 8px;
-        resize: none;
-        &::placeholder {
-          color: var(--other-color);
-          font-size: 15px;
+        input,
+        textarea {
+          width: 100%;
+          padding: 20px;
+          outline: none;
+          border: 1px solid var(--main-color);
+          background: #2d343f;
+          color: var(--text-color);
+          border-radius: 8px;
+          resize: none;
+          &::placeholder {
+            color: var(--other-color);
+            font-size: 15px;
+          }
+          &.hasError {
+            border: 1px solid #f63b3b;
+            margin-bottom: 0.2rem;
+          }
+        }
+        .textError {
+          color: #f63b3b;
         }
       }
       .send-btn {

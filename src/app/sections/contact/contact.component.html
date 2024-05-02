@@ -6,11 +6,28 @@
   </div>
 
   <div class="contact-form" data-aos="zoom-in">
-    <form [formGroup]="form" (submit)="sendEmail($event)">
-      <input type="text" formControlName="from_name" name="from_name" placeholder="Tu nombre" required>
-      <input type="email" formControlName="from_email" name="from_email" placeholder="Correo eléctronico" required>
-      <textarea formControlName="message" name="message" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."
-        required></textarea>
+    <form [formGroup]="form" (submit)="sendEmail()">
+      <div class="control">
+        <input type="text" [class.hasError]="isValidField('from_name')" formControlName="from_name"
+          placeholder="Tu nombre" required>
+        <span *ngIf="isValidField('from_name')" class="textError">
+          {{ getFieldError('from_name') }}
+        </span>
+      </div>
+      <div class="control">
+        <input type="email" [class.hasError]="isValidField('from_email')" formControlName="from_email"
+          placeholder="Correo eléctronico" required>
+        <span *ngIf="isValidField('from_email')" class="textError">
+          {{ getFieldError('from_email') }}
+        </span>
+      </div>
+      <div class="control">
+        <textarea [class.hasError]="isValidField('message')" formControlName="message" cols="30" rows="10"
+          placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <span *ngIf="isValidField('message')" class="textError">
+          {{ getFieldError('message') }}
+        </span>
+      </div>
       <button type="submit" class="send-btn" value="Enviar mensaje">Enviar mensaje</button>
     </form>
   </div>

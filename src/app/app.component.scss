@@ -43,8 +43,8 @@ header {
 
 .scroll-top {
   position: fixed;
-  bottom: 80px;
-  right: 20px;
+  bottom: 40px;
+  right: 40px;
   display: none;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -55,12 +55,12 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #075fe4;
+    background: #075fe4b3;
     width: 60px;
     height: 60px;
     border-radius: 10px;
     color: var(--text-color);
-    font-size: 27px;
+    font-size: 40px;
   }
 }
 
@@ -126,5 +126,11 @@ header {
         box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
       }
     }
+  }
+}
+@media (max-width: 470px) {
+  .scroll-top {
+    bottom: 80px;
+    right: 20px;
   }
 }
